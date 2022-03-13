@@ -1,0 +1,609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		26606C4727DE6F0E00323466 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26606C4627DE6F0E00323466 /* AppDelegate.swift */; };
+		26606C4927DE6F0E00323466 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26606C4827DE6F0E00323466 /* SceneDelegate.swift */; };
+		26606C4B27DE6F0E00323466 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26606C4A27DE6F0E00323466 /* ViewController.swift */; };
+		26606C4E27DE6F0E00323466 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26606C4C27DE6F0E00323466 /* Main.storyboard */; };
+		26606C5027DE6F0F00323466 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26606C4F27DE6F0F00323466 /* Assets.xcassets */; };
+		26606C5327DE6F0F00323466 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26606C5127DE6F0F00323466 /* LaunchScreen.storyboard */; };
+		26606C5E27DE6F1000323466 /* jerdleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26606C5D27DE6F1000323466 /* jerdleTests.swift */; };
+		26606C6827DE6F1000323466 /* jerdleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26606C6727DE6F1000323466 /* jerdleUITests.swift */; };
+		26606C6A27DE6F1000323466 /* jerdleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26606C6927DE6F1000323466 /* jerdleUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		26606C5A27DE6F1000323466 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 26606C3B27DE6F0E00323466 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 26606C4227DE6F0E00323466;
+			remoteInfo = jerdle;
+		};
+		26606C6427DE6F1000323466 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 26606C3B27DE6F0E00323466 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 26606C4227DE6F0E00323466;
+			remoteInfo = jerdle;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		26606C4327DE6F0E00323466 /* jerdle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jerdle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		26606C4627DE6F0E00323466 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		26606C4827DE6F0E00323466 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		26606C4A27DE6F0E00323466 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		26606C4D27DE6F0E00323466 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		26606C4F27DE6F0F00323466 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		26606C5227DE6F0F00323466 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		26606C5427DE6F0F00323466 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26606C5927DE6F1000323466 /* jerdleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jerdleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		26606C5D27DE6F1000323466 /* jerdleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jerdleTests.swift; sourceTree = "<group>"; };
+		26606C6327DE6F1000323466 /* jerdleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jerdleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		26606C6727DE6F1000323466 /* jerdleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jerdleUITests.swift; sourceTree = "<group>"; };
+		26606C6927DE6F1000323466 /* jerdleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jerdleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		26606C4027DE6F0E00323466 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26606C5627DE6F1000323466 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26606C6027DE6F1000323466 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		26606C3A27DE6F0E00323466 = {
+			isa = PBXGroup;
+			children = (
+				26606C4527DE6F0E00323466 /* jerdle */,
+				26606C5C27DE6F1000323466 /* jerdleTests */,
+				26606C6627DE6F1000323466 /* jerdleUITests */,
+				26606C4427DE6F0E00323466 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		26606C4427DE6F0E00323466 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				26606C4327DE6F0E00323466 /* jerdle.app */,
+				26606C5927DE6F1000323466 /* jerdleTests.xctest */,
+				26606C6327DE6F1000323466 /* jerdleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		26606C4527DE6F0E00323466 /* jerdle */ = {
+			isa = PBXGroup;
+			children = (
+				26606C4627DE6F0E00323466 /* AppDelegate.swift */,
+				26606C4827DE6F0E00323466 /* SceneDelegate.swift */,
+				26606C4A27DE6F0E00323466 /* ViewController.swift */,
+				26606C4C27DE6F0E00323466 /* Main.storyboard */,
+				26606C4F27DE6F0F00323466 /* Assets.xcassets */,
+				26606C5127DE6F0F00323466 /* LaunchScreen.storyboard */,
+				26606C5427DE6F0F00323466 /* Info.plist */,
+			);
+			path = jerdle;
+			sourceTree = "<group>";
+		};
+		26606C5C27DE6F1000323466 /* jerdleTests */ = {
+			isa = PBXGroup;
+			children = (
+				26606C5D27DE6F1000323466 /* jerdleTests.swift */,
+			);
+			path = jerdleTests;
+			sourceTree = "<group>";
+		};
+		26606C6627DE6F1000323466 /* jerdleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				26606C6727DE6F1000323466 /* jerdleUITests.swift */,
+				26606C6927DE6F1000323466 /* jerdleUITestsLaunchTests.swift */,
+			);
+			path = jerdleUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		26606C4227DE6F0E00323466 /* jerdle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26606C6D27DE6F1000323466 /* Build configuration list for PBXNativeTarget "jerdle" */;
+			buildPhases = (
+				26606C3F27DE6F0E00323466 /* Sources */,
+				26606C4027DE6F0E00323466 /* Frameworks */,
+				26606C4127DE6F0E00323466 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = jerdle;
+			productName = jerdle;
+			productReference = 26606C4327DE6F0E00323466 /* jerdle.app */;
+			productType = "com.apple.product-type.application";
+		};
+		26606C5827DE6F1000323466 /* jerdleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26606C7027DE6F1000323466 /* Build configuration list for PBXNativeTarget "jerdleTests" */;
+			buildPhases = (
+				26606C5527DE6F1000323466 /* Sources */,
+				26606C5627DE6F1000323466 /* Frameworks */,
+				26606C5727DE6F1000323466 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				26606C5B27DE6F1000323466 /* PBXTargetDependency */,
+			);
+			name = jerdleTests;
+			productName = jerdleTests;
+			productReference = 26606C5927DE6F1000323466 /* jerdleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		26606C6227DE6F1000323466 /* jerdleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26606C7327DE6F1000323466 /* Build configuration list for PBXNativeTarget "jerdleUITests" */;
+			buildPhases = (
+				26606C5F27DE6F1000323466 /* Sources */,
+				26606C6027DE6F1000323466 /* Frameworks */,
+				26606C6127DE6F1000323466 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				26606C6527DE6F1000323466 /* PBXTargetDependency */,
+			);
+			name = jerdleUITests;
+			productName = jerdleUITests;
+			productReference = 26606C6327DE6F1000323466 /* jerdleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		26606C3B27DE6F0E00323466 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					26606C4227DE6F0E00323466 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					26606C5827DE6F1000323466 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 26606C4227DE6F0E00323466;
+					};
+					26606C6227DE6F1000323466 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 26606C4227DE6F0E00323466;
+					};
+				};
+			};
+			buildConfigurationList = 26606C3E27DE6F0E00323466 /* Build configuration list for PBXProject "jerdle" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 26606C3A27DE6F0E00323466;
+			productRefGroup = 26606C4427DE6F0E00323466 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				26606C4227DE6F0E00323466 /* jerdle */,
+				26606C5827DE6F1000323466 /* jerdleTests */,
+				26606C6227DE6F1000323466 /* jerdleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		26606C4127DE6F0E00323466 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26606C5327DE6F0F00323466 /* LaunchScreen.storyboard in Resources */,
+				26606C5027DE6F0F00323466 /* Assets.xcassets in Resources */,
+				26606C4E27DE6F0E00323466 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26606C5727DE6F1000323466 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26606C6127DE6F1000323466 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		26606C3F27DE6F0E00323466 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26606C4B27DE6F0E00323466 /* ViewController.swift in Sources */,
+				26606C4727DE6F0E00323466 /* AppDelegate.swift in Sources */,
+				26606C4927DE6F0E00323466 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26606C5527DE6F1000323466 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26606C5E27DE6F1000323466 /* jerdleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26606C5F27DE6F1000323466 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26606C6A27DE6F1000323466 /* jerdleUITestsLaunchTests.swift in Sources */,
+				26606C6827DE6F1000323466 /* jerdleUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		26606C5B27DE6F1000323466 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 26606C4227DE6F0E00323466 /* jerdle */;
+			targetProxy = 26606C5A27DE6F1000323466 /* PBXContainerItemProxy */;
+		};
+		26606C6527DE6F1000323466 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 26606C4227DE6F0E00323466 /* jerdle */;
+			targetProxy = 26606C6427DE6F1000323466 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		26606C4C27DE6F0E00323466 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				26606C4D27DE6F0E00323466 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		26606C5127DE6F0F00323466 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				26606C5227DE6F0F00323466 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		26606C6B27DE6F1000323466 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		26606C6C27DE6F1000323466 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		26606C6E27DE6F1000323466 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TPKS62QTH4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = jerdle/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ziewvater.jerdle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		26606C6F27DE6F1000323466 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TPKS62QTH4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = jerdle/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ziewvater.jerdle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		26606C7127DE6F1000323466 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TPKS62QTH4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ziewvater.jerdleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/jerdle.app/jerdle";
+			};
+			name = Debug;
+		};
+		26606C7227DE6F1000323466 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TPKS62QTH4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ziewvater.jerdleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/jerdle.app/jerdle";
+			};
+			name = Release;
+		};
+		26606C7427DE6F1000323466 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TPKS62QTH4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ziewvater.jerdleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = jerdle;
+			};
+			name = Debug;
+		};
+		26606C7527DE6F1000323466 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TPKS62QTH4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ziewvater.jerdleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = jerdle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		26606C3E27DE6F0E00323466 /* Build configuration list for PBXProject "jerdle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26606C6B27DE6F1000323466 /* Debug */,
+				26606C6C27DE6F1000323466 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		26606C6D27DE6F1000323466 /* Build configuration list for PBXNativeTarget "jerdle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26606C6E27DE6F1000323466 /* Debug */,
+				26606C6F27DE6F1000323466 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		26606C7027DE6F1000323466 /* Build configuration list for PBXNativeTarget "jerdleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26606C7127DE6F1000323466 /* Debug */,
+				26606C7227DE6F1000323466 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		26606C7327DE6F1000323466 /* Build configuration list for PBXNativeTarget "jerdleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26606C7427DE6F1000323466 /* Debug */,
+				26606C7527DE6F1000323466 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 26606C3B27DE6F0E00323466 /* Project object */;
+}
