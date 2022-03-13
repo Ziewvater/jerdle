@@ -33,6 +33,20 @@
 			remoteGlobalIDString = 26606C4227DE6F0E00323466;
 			remoteInfo = jerdle;
 		};
+		26606C9F27DE709A00323466 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 26606C9A27DE709A00323466 /* jerdleEngine.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 26606C8027DE709A00323466;
+			remoteInfo = jerdleEngine;
+		};
+		26606CA127DE709A00323466 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 26606C9A27DE709A00323466 /* jerdleEngine.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 26606C8A27DE709A00323466;
+			remoteInfo = jerdleEngineTests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +63,7 @@
 		26606C6327DE6F1000323466 /* jerdleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jerdleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		26606C6727DE6F1000323466 /* jerdleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jerdleUITests.swift; sourceTree = "<group>"; };
 		26606C6927DE6F1000323466 /* jerdleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jerdleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		26606C9A27DE709A00323466 /* jerdleEngine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = jerdleEngine.xcodeproj; path = jerdleEngine/jerdleEngine.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +94,7 @@
 		26606C3A27DE6F0E00323466 = {
 			isa = PBXGroup;
 			children = (
+				26606C9A27DE709A00323466 /* jerdleEngine.xcodeproj */,
 				26606C4527DE6F0E00323466 /* jerdle */,
 				26606C5C27DE6F1000323466 /* jerdleTests */,
 				26606C6627DE6F1000323466 /* jerdleUITests */,
@@ -125,6 +141,15 @@
 				26606C6927DE6F1000323466 /* jerdleUITestsLaunchTests.swift */,
 			);
 			path = jerdleUITests;
+			sourceTree = "<group>";
+		};
+		26606C9B27DE709A00323466 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				26606CA027DE709A00323466 /* jerdleEngine.framework */,
+				26606CA227DE709A00323466 /* jerdleEngineTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,6 +242,12 @@
 			mainGroup = 26606C3A27DE6F0E00323466;
 			productRefGroup = 26606C4427DE6F0E00323466 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 26606C9B27DE709A00323466 /* Products */;
+					ProjectRef = 26606C9A27DE709A00323466 /* jerdleEngine.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				26606C4227DE6F0E00323466 /* jerdle */,
@@ -225,6 +256,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		26606CA027DE709A00323466 /* jerdleEngine.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = jerdleEngine.framework;
+			remoteRef = 26606C9F27DE709A00323466 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		26606CA227DE709A00323466 /* jerdleEngineTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = jerdleEngineTests.xctest;
+			remoteRef = 26606CA127DE709A00323466 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		26606C4127DE6F0E00323466 /* Resources */ = {
