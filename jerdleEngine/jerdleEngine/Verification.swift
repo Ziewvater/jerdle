@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum VerificationStatus {
+public enum VerificationStatus {
     /// The letter is correctly placed
     case correct
     /// The letter appears in the answer, but is in the wrong place
@@ -16,13 +16,13 @@ enum VerificationStatus {
     case incorrect
 }
 
-struct VerificationResult {
-    let answer: Character
-    let status: VerificationStatus
+public struct VerificationResult {
+    public let answer: Character
+    public let status: VerificationStatus
 }
 
 extension VerificationResult: Equatable {
-    static func == (lhs: VerificationResult, rhs: VerificationResult) -> Bool {
+    public static func == (lhs: VerificationResult, rhs: VerificationResult) -> Bool {
         return lhs.answer == rhs.answer && lhs.status == rhs.status
     }
 }
@@ -54,17 +54,17 @@ extension DecomposedSolution: Equatable {
     }
 }
 
-class Verification {
+public class Verification {
 
     let solution: String
     let decomposedSolution: DecomposedSolution
 
-    init(withSolution solution: String) {
+    public init(withSolution solution: String) {
         self.solution = solution
         self.decomposedSolution = DecomposedSolution.decompose(solution)
     }
 
-    func check(answer: String) -> [VerificationResult] {
+    public func check(answer: String) -> [VerificationResult] {
         var verifiedResult: [VerificationResult] = []
         for (index, character) in answer.enumerated() {
             if let solutionResult = decomposedSolution.result(for: character) {
