@@ -63,6 +63,7 @@ class GameView: UIView {
         textField.autocorrectionType = .no
         textField.spellCheckingType = .no
         textField.isHidden = true
+        textField.delegate = self
 
         addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapGameView(gesture:))))
     }
@@ -75,4 +76,25 @@ extension GameView {
     @objc func didTapGameView(gesture: UIGestureRecognizer) {
         textField.becomeFirstResponder()
     }
+}
+
+extension GameView: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let capitalizedString = string.capitalized
+        let replacementCharacterSet = CharacterSet(charactersIn: capitalizedString)
+        guard CharacterSet.uppercaseLetters.isSuperset(of: replacementCharacterSet) else {
+            // Only allow capitalized characters to be added
+            return false
+        }
+
+        if let existingText = textField.text,
+           let stringRange = Range(range, in: existingText) {
+            let result = existingText.replacingCharacters(in: stringRange, with: capitalizedString)
+            guard result.count <= letterCount else {
+                return false
+            }
+        }
+        return true
+    }
+
 }
