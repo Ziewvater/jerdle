@@ -14,7 +14,7 @@ class GameViewController: UIViewController {
     let textField = UITextField()
 
     let answerVerifier: Verification
-    fileprivate var answers: [String] = []
+    fileprivate var answers: [[VerificationResult]] = []
     let letterCount: Int = 5
     let guessCount: Int = 6
 
@@ -50,7 +50,42 @@ class GameViewController: UIViewController {
     fileprivate func submit(guess answer: String) {
         let verificationResults = answerVerifier.check(answer: answer)
         gameView.updateGameUI(with: verificationResults, forRow: answers.count)
-        answers.append(answer)
+        answers.append(verificationResults)
+        verifyGameState()
+    }
+
+    /// Checks current game state to determine which actions are available to the player
+    /// Ends the game if the player has either exhausted all guesses or has guessed correctly
+    fileprivate func verifyGameState() {
+        let allCorrect = answers.last?.reduce(true, { partialResult, letterResult in
+            if letterResult.status != .correct {
+                return false
+            } else {
+                return partialResult
+            }
+        })
+        if let allCorrect = allCorrect,
+           allCorrect {
+            textField.resignFirstResponder()
+            textField.isEnabled = false
+            showSuccessState()
+        } else if answers.count == guessCount {
+            textField.resignFirstResponder()
+            textField.isEnabled = false
+            showFailureState()
+        }
+    }
+
+    fileprivate func showFailureState() {
+        let alert = UIAlertController(title: "Nice Try!", message: "Sorry, seems like you're out of guesses. Better luck next time!", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+
+    fileprivate func showSuccessState() {
+        let alert = UIAlertController(title: "Great Job!", message: "Yahoo!", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "I Did A Great Job", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
 }
 
