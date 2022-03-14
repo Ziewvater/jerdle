@@ -59,7 +59,10 @@ class GameView: UIView {
 
         self.rowViews = rowViews
 
-        self.textField.isHidden = true
+        addSubview(textField)
+        textField.autocorrectionType = .no
+        textField.spellCheckingType = .no
+        textField.isHidden = true
 
         addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapGameView(gesture:))))
     }
@@ -70,6 +73,6 @@ class GameView: UIView {
 // MARK: Tap Handling
 extension GameView {
     @objc func didTapGameView(gesture: UIGestureRecognizer) {
-        self.textField.becomeFirstResponder()
+        textField.becomeFirstResponder()
     }
 }
