@@ -6,6 +6,21 @@
 //
 
 import UIKit
+import jerdleEngine
+
+extension VerificationStatus {
+
+    static func letterStatus(for verificationStatus: VerificationStatus) -> LetterStatus {
+        switch verificationStatus {
+        case .correct:
+            return .correct
+        case .misplaced:
+            return .misplaced
+        case .incorrect:
+            return .incorrect
+        }
+    }
+}
 
 class LetterRowView: UIView {
     let letterCount: Int
@@ -56,6 +71,14 @@ class LetterRowView: UIView {
                 return
             }
             letterView.update(letter: split[index], status: .unresolved)
+        }
+    }
+
+    internal func updateRow(with verificationResults: [VerificationResult]) {
+        letterViews.enumerated().forEach { (index, letterView) in
+            let result = verificationResults[index]
+            letterView.update(letter: result.answer,
+                              status: VerificationStatus.letterStatus(for: result.status))
         }
     }
 }
