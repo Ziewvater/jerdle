@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import jerdleEngine
+
+protocol GameViewDelegate {
+    func gameViewWasTapped(gameView: GameView)
+}
 
 class GameView: UIView {
-
-    let textField = UITextField()
 
     var rowViews: [LetterRowView] = []
 
@@ -17,6 +20,8 @@ class GameView: UIView {
 
     let letterCount: Int
     let guessCount: Int
+
+    var delegate: GameViewDelegate?
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -61,23 +66,23 @@ class GameView: UIView {
 
         self.rowViews = rowViews
 
-        addSubview(textField)
-        textField.autocorrectionType = .no
-        textField.spellCheckingType = .no
-        textField.autocapitalizationType = .allCharacters
-        textField.isHidden = true
-        textField.delegate = self
-
         addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapGameView(gesture:))))
     }
 
-    fileprivate func updateGameUI(with answer: String) {
-        let currentRow = answers.count
-        guard currentRow < rowViews.count else {
+    internal func updateGameUI(with answer: String, forRow rowIndex: Int) {
+        guard rowIndex < rowViews.count else {
             return
         }
-        let row = rowViews[currentRow]
+        let row = rowViews[rowIndex]
         row.updateRow(with: answer)
+    }
+
+    internal func updateGameUI(with verificationResults: [VerificationResult], forRow rowIndex: Int) {
+        guard rowIndex < rowViews.count else {
+            return
+        }
+        let row = rowViews[rowIndex]
+        row.updateRow(with: verificationResults)
     }
 }
 
@@ -85,29 +90,6 @@ class GameView: UIView {
 // MARK: Tap Handling
 extension GameView {
     @objc func didTapGameView(gesture: UIGestureRecognizer) {
-        textField.becomeFirstResponder()
+        delegate?.gameViewWasTapped(gameView: self)
     }
-}
-
-extension GameView: UITextFieldDelegate {
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        let capitalizedString = string.capitalized
-        let replacementCharacterSet = CharacterSet(charactersIn: capitalizedString)
-        guard CharacterSet.uppercaseLetters.isSuperset(of: replacementCharacterSet) else {
-            // Only allow capitalized characters to be added
-            return false
-        }
-
-        if let existingText = textField.text,
-           let stringRange = Range(range, in: existingText) {
-            let result = existingText.replacingCharacters(in: stringRange, with: capitalizedString)
-            guard result.count <= letterCount else {
-                return false
-            }
-
-            updateGameUI(with: result)
-        }
-        return true
-    }
-
 }
