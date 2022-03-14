@@ -46,6 +46,16 @@ class LetterRowView: UIView {
         // Attach the final view to trailing end of container
         letterViews.last?.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
         self.letterViews = letterViews
+    }
 
+    internal func updateRow(with answer: String) {
+        let split = Array(answer)
+        letterViews.enumerated().forEach { (index, letterView) in
+            guard index < split.count else {
+                letterView.update(letter: nil, status: .unresolved)
+                return
+            }
+            letterView.update(letter: split[index], status: .unresolved)
+        }
     }
 }

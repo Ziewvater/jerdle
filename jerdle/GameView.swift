@@ -13,6 +13,8 @@ class GameView: UIView {
 
     var rowViews: [LetterRowView] = []
 
+    fileprivate var answers: [String] = []
+
     let letterCount: Int
     let guessCount: Int
 
@@ -62,12 +64,21 @@ class GameView: UIView {
         addSubview(textField)
         textField.autocorrectionType = .no
         textField.spellCheckingType = .no
+        textField.autocapitalizationType = .allCharacters
         textField.isHidden = true
         textField.delegate = self
 
         addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapGameView(gesture:))))
     }
 
+    fileprivate func updateGameUI(with answer: String) {
+        let currentRow = answers.count
+        guard currentRow < rowViews.count else {
+            return
+        }
+        let row = rowViews[currentRow]
+        row.updateRow(with: answer)
+    }
 }
 
 
@@ -93,6 +104,8 @@ extension GameView: UITextFieldDelegate {
             guard result.count <= letterCount else {
                 return false
             }
+
+            updateGameUI(with: result)
         }
         return true
     }
