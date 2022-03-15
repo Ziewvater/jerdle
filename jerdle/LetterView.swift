@@ -29,6 +29,7 @@ class LetterView: UIView {
 
         addSubview(label)
         label.adjustsFontSizeToFitWidth = true
+        label.font = .systemFont(ofSize: 24, weight: .semibold)
         label.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         label.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
 
@@ -63,9 +64,12 @@ class LetterView: UIView {
     private func backgroundColor(for status: LetterStatus) -> UIColor {
         switch status {
         case .unresolved: return .white
-        case .correct: return .green
-        case .misplaced: return .yellow
-        case .incorrect: return .gray
+        case .correct:
+            return UIColor(red: 106.0/255, green: 170.0/255, blue: 100.0/255, alpha: 1)
+        case .misplaced:
+            return UIColor(red: 201.0/255, green: 180.0/255, blue: 88.0/255, alpha: 1)
+        case .incorrect:
+            return UIColor(red: 120.0/255, green: 124.0/255, blue: 126.0/255, alpha: 1)
         }
     }
 
