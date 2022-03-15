@@ -50,7 +50,7 @@ class LetterView: UIView {
         switch status {
         case .unresolved:
             layer.borderColor = UIColor.gray.cgColor
-            layer.borderWidth = 4.0
+            layer.borderWidth = 2.0
 
         case .correct: fallthrough
         case .misplaced: fallthrough

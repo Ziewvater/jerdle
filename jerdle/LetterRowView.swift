@@ -36,22 +36,24 @@ class LetterRowView: UIView {
         super.init(frame: frame)
         translatesAutoresizingMaskIntoConstraints = false
 
-        backgroundColor = .orange
-
         var letterViews = [LetterView]()
         for _ in 0..<letterCount {
             let view = LetterView(frame: CGRect.zero)
             self.addSubview(view)
 
             // Pin view to top and bottom
-            view.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-            view.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+            NSLayoutConstraint.activate([
+                view.topAnchor.constraint(equalTo: self.topAnchor),
+                view.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            ])
 
             // Pin to trailing edge of preceding view
             // and set equal width
             if let previousView = letterViews.last {
-                view.leadingAnchor.constraint(equalTo: previousView.trailingAnchor).isActive = true
-                view.widthAnchor.constraint(equalTo: previousView.widthAnchor).isActive = true
+                NSLayoutConstraint.activate([
+                    view.leadingAnchor.constraint(equalTo: previousView.trailingAnchor, constant: kHorizontalInterLetterSpacing),
+                    view.widthAnchor.constraint(equalTo: previousView.widthAnchor),
+                ])
             } else {
                 // or if first, pin to the leading edge of container
                 view.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
